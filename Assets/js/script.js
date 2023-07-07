@@ -33,4 +33,20 @@ $(function () {
     updateClasses(dayJsTime);
   }
 
+  //Updates the time on the next repaint of the animation frame.
+  function startTimerInterval() {
+    updateTime();
+    requestAnimationFrame(startTimerInterval);
+  }
+
+  //Constructs the time/task variable and sets them to local storage.
+  $(".saveBtn").on("click", function (event) {
+    event.preventDefault();
+    const time = $(this).parent().attr("id");
+    const task = $(this).siblings(".description").val();
+    localStorage.setItem(time, task);
+    loadTasks();
+  });
+
+
 });
