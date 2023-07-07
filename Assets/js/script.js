@@ -14,4 +14,19 @@ $(function () {
     });
   }
   
+  //Adds class to time blocks to indicate past, present, or future.
+  function updateClasses(dayJsTime) {
+    const currentHour = parseInt(dayJsTime.format("H"));
+    $(".time-block").each(function () {
+      const blockHour = parseInt($(this).attr("id").split("-")[1]);
+      $(this).toggleClass("past", blockHour < currentHour);
+      $(this).toggleClass("present", blockHour === currentHour);
+      $(this).toggleClass("future", blockHour > currentHour);
+    });
+  }
+
+  
+
+
+
 });
