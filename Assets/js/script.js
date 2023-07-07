@@ -48,5 +48,10 @@ $(function () {
     loadTasks();
   });
 
+  //Calls the timerInterval function.
+  startTimerInterval();
+
+  //Calls the loadTasks function.
+  loadTasks();
 
 });
