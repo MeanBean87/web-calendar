@@ -25,8 +25,12 @@ $(function () {
     });
   }
 
-  
-
-
+  //Updates the day and time displayed, and calls updateClasses.
+  function updateTime() {
+    const dayJsTime = dayjs();
+    $("#currentDay").text(dayJsTime.format("dddd, MMMM Do"));
+    $("#currentTime").text(dayJsTime.format("h:mm:ss A"));
+    updateClasses(dayJsTime);
+  }
 
 });
