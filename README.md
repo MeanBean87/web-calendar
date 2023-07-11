@@ -36,7 +36,6 @@ function startTimerInterval() {
 ## Learning Points
 
 1. Request Animation Frame: The Web Calendar utilizes the requestAnimationFrame method, a powerful feature in JavaScript for smooth and efficient animations. By leveraging requestAnimationFrame, the application achieves optimal rendering performance by synchronizing animations with the browser's refresh rate. This results in visually pleasing and responsive user experiences.
-
 2. Local Storage: The Web Calendar utilizes the browser's local storage feature to store and retrieve data locally. This enables seamless data persistence, allowing users to access their schedules and events even after closing and reopening the application. Local storage is a convenient way to save and retrieve user-specific data without the need for server-side storage or databases.
 
 ## Usage
@@ -60,7 +59,8 @@ Michael Mattingly
 
 - The Web Password Generator was created by [meanbean87](https://github.com/meanbean87), with source code provided from UC Berkeley Extension.
 - Favicon owned by Michael Mattingly.
-- Source-code provided from UC Berkeley EXT
+- Source-code provided from UC Berkeley EXT.
+- Uses DayJs for date functions.
 - Uses Bootstap CDN, Font Awesome CDN, and fonts from Google Fonts CDN.
 
 ## License
