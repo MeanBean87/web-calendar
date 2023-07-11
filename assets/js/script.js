@@ -46,7 +46,6 @@ $(function () {
     const time = $(this).parent().attr("id");
     const task = $(this).siblings(".description").val();
     localStorage.setItem(time, task);
-    loadTasks();
   });
 
   //Calls the timerInterval function.
