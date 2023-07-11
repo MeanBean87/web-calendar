@@ -2,9 +2,9 @@
 
 ## Description
 
-This web application generates secure passwords based on user-defined criteria. It allows users to customize the length of the password and select the character types to include, such as lowercase letters, uppercase letters, numbers, and special characters. This was a homework challenge during bootcamp at UCB Ext. [Link to Deployed page](https://meanbean87.github.io/web-password-generator/).
+The Web Calendar is a user-friendly application for managing schedules and events. Easily create, view, and organize appointments.The application utilizes local storage for seamless data persistence. Developed during a UCB Ext bootcamp. [Link to Deployed page](https://meanbean87.github.io/web-calendar/).
 
-![Site Landing Page](./assets/images/web-password-generator.png)
+![Site Landing Page](./assets/images/web-calendar.png)
 
 ## Technology Used
 
@@ -18,25 +18,36 @@ This web application generates secure passwords based on user-defined criteria. 
 ## JavaScript Example
 
 ```JavaScript
-  //For loop to generate the password.
-  for (let i = 0; i < passwordLength; i++) {
-    randomString += selectedCharacters.charAt(
-      Math.floor(Math.random() * selectedCharacters.length)
+ //Updates the day and time displayed, and calls updateClasses.
+function updateTime() {
+  const dayJsTime = dayjs();
+  $("#currentDay").text(dayJsTime.format("dddd, MMMM Do"));
+  $("#currentTime").text(dayJsTime.format("h:mm:ss A"));
+  updateClasses(dayJsTime);
+}
+
+//Updates the time on the next repaint of the animation frame.
+function startTimerInterval() {
+  updateTime();
+  requestAnimationFrame(startTimerInterval);
+}
 ```
 
 ## Learning Points
 
-Use of event handlers and JavaScript to create dynamically rendered content. And the datatypes returned by using event handlers in JavaScript.
+1. Request Animation Frame: The Web Calendar utilizes the requestAnimationFrame method, a powerful feature in JavaScript for smooth and efficient animations. By leveraging requestAnimationFrame, the application achieves optimal rendering performance by synchronizing animations with the browser's refresh rate. This results in visually pleasing and responsive user experiences.
+
+2. Local Storage: The Web Calendar utilizes the browser's local storage feature to store and retrieve data locally. This enables seamless data persistence, allowing users to access their schedules and events even after closing and reopening the application. Local storage is a convenient way to save and retrieve user-specific data without the need for server-side storage or databases.
 
 ## Usage
 
 To use the Web Password Generator:
 
-1. Visit the deployed site [here](https://meanbean87.github.io/web-password-generator/).
-2. Click on the "Generate Password" button.
-3. A prompt will appear asking for the desired length of the password. Enter a number between 8 and 128.
-4. You will then be prompted to include lowercase letters, uppercase letters, numbers, and special characters in the password. Click "OK" for yes or "Cancel" for no.
-5. After confirming the character types, the generated password will be displayed in the text box.
+1. Visit the deployed site [here](https://meanbean87.github.io/web-calendar/).
+2. Click on the textarea fields and enter your reminder.
+3. Click the save icon. This will save your data to localStorage for persistance
+4. Colors of the textarea will change depending on if the hour is past(grey), current(red), or future(green). 
+5. Features a dynamic date and clock display.
 
 ## Author Info
 
@@ -49,6 +60,8 @@ Michael Mattingly
 
 - The Web Password Generator was created by [meanbean87](https://github.com/meanbean87), with source code provided from UC Berkeley Extension.
 - Favicon owned by Michael Mattingly.
+- Source-code provided from UC Berkeley EXT
+- Uses Bootstap CDN, Font Awesome CDN, and fonts from Google Fonts CDN.
 
 ## License
 
