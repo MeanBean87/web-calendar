@@ -62,6 +62,7 @@ Michael Mattingly
 - Source-code provided from UC Berkeley EXT.
 - Uses DayJs for date functions.
 - Uses Bootstap CDN, Font Awesome CDN, and fonts from Google Fonts CDN.
+- Uses jQuery and jQuery UI components.
 
 ## License
 
