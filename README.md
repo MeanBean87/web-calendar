@@ -45,9 +45,9 @@ To use the Web Password Generator:
 
 1. Visit the deployed site [here](https://meanbean87.github.io/web-calendar/).
 2. Click on the textarea fields and enter your reminder.
-3. Click the save icon. This will save your data to localStorage for persistance
-4. Colors of the textarea will change depending on if the hour is past(grey), current(red), or future(green). 
-5. Features a dynamic date and clock display.
+3. Click the save icon. This will save your data to localStorage for persistence.
+4. The colors of the textarea will change depending on whether the hour has passed (grey), is the current hour (red), or is in the future (green).
+5. The Web Password Generator also features a dynamic date and clock display..
 
 ## Author Info
 
